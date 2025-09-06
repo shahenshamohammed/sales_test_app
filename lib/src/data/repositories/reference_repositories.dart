@@ -14,7 +14,6 @@ class FirestoreReferenceRepository implements ReferenceRepository {
 
   @override
   Future<List<RefItem>> getAreas() async {
-    print("============================$_db");
     final q = await _db.collection('customer_area').orderBy('name').get();
     return q.docs.map((d) => RefItem(id: d.id, name: (d['name'] as String))).toList();
   }

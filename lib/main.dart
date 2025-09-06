@@ -4,10 +4,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sales_test_app/src/presentation/blocs/auth/auth_bloc.dart';
 import 'package:sales_test_app/src/presentation/blocs/auth/auth_firebase_repository.dart';
 import 'package:sales_test_app/src/presentation/screens/auth_gate.dart';
-import 'package:sales_test_app/src/presentation/screens/customer_add.dart';
-import 'package:sales_test_app/src/presentation/screens/customer_list_page.dart';
+import 'package:sales_test_app/src/presentation/screens/customers/customer_add_screen.dart';
+import 'package:sales_test_app/src/presentation/screens/customers/customer_list_screen.dart';
 import 'package:sales_test_app/src/presentation/screens/dashboard_screen.dart';
+import 'package:sales_test_app/src/presentation/screens/Invoice/invoice_form_screen.dart';
 import 'package:sales_test_app/src/presentation/screens/login_screen.dart';
+import 'package:sales_test_app/src/presentation/screens/products/product_form_screen.dart';
+import 'package:sales_test_app/src/presentation/screens/products/product_list_screen.dart';
+import 'package:sales_test_app/src/presentation/screens/salesreport/sales_report_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -38,6 +42,13 @@ class MyApp extends StatelessWidget {
         '/dashboard': (_) => const DashboardScreen(),
         '/customers': (_) => const CustomerAddPage(),
         '/customer_list': (_) => const CustomerListPage(),
+        '/product_add': (_) => const ProductAddPage(),
+        '/sales_report': (_) => const SalesReportGroupedPage(),
+        '/invoice_create': (_) => const InvoiceCreatePage(),
+      },
+      onGenerateRoute: (settings) {
+        // handle dynamic paths if you add later, otherwise return null
+        return null;
       },
     );
   }

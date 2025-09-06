@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sales_test_app/src/data/repositories/customer_list_repository.dart';
 
-import '../../core/widgets/add_new_customer_banner.dart';
-import '../../core/widgets/customer_filter_bar.dart';
-import '../../core/widgets/customer_list_card.dart';
-import '../blocs/customer_list/customer_list_bloc.dart';
-import '../blocs/customer_list/customer_list_event.dart';
-import '../blocs/customer_list/customer_list_state.dart';
+import 'widgets/add_new_customer_banner.dart';
+import 'widgets/customer_filter_bar.dart';
+import 'widgets/customer_list_card.dart';
+import '../../blocs/customer_list/customer_list_bloc.dart';
+import '../../blocs/customer_list/customer_list_event.dart';
+import '../../blocs/customer_list/customer_list_state.dart';
 
 
 
@@ -53,13 +53,6 @@ class _CustomerListPageState extends State<CustomerListPage> {
           return Scaffold(
             appBar: AppBar(
               title: const Text('Customers'),
-              actions: [
-                IconButton(
-                  tooltip: 'Add',
-                  onPressed: () => Navigator.of(context).pushNamed('/customers/new'),
-                  icon: const Icon(Icons.person_add_alt_1),
-                ),
-              ],
             ),
             body: RefreshIndicator(
               onRefresh: () async => context.read<CustomerListBloc>().add(CustomerListRefreshed()),
@@ -73,16 +66,16 @@ class _CustomerListPageState extends State<CustomerListPage> {
                     ),
                   ),
                   // 2) Filters
-                  SliverToBoxAdapter(
-                    child: FilterBar(
-                      areaId: state.areaId,
-                      categoryId: state.categoryId,
-                      search: state.search,
-                      onSearch: (t) => context.read<CustomerListBloc>().add(CustomerListSearchChanged(t)),
-                      onAreaChanged: (id) => context.read<CustomerListBloc>().add(CustomerListAreaFilterChanged(id)),
-                      onCategoryChanged: (id) => context.read<CustomerListBloc>().add(CustomerListCategoryFilterChanged(id)),
-                    ),
-                  ),
+                  // SliverToBoxAdapter(
+                  //   child: FilterBar(
+                  //     areaId: state.areaId,
+                  //     categoryId: state.categoryId,
+                  //     search: state.search,
+                  //     onSearch: (t) => context.read<CustomerListBloc>().add(CustomerListSearchChanged(t)),
+                  //     onAreaChanged: (id) => context.read<CustomerListBloc>().add(CustomerListAreaFilterChanged(id)),
+                  //     onCategoryChanged: (id) => context.read<CustomerListBloc>().add(CustomerListCategoryFilterChanged(id)),
+                  //   ),
+                  // ),
                   // 3) Content
                   if (isLoading)
                     const SliverPadding(

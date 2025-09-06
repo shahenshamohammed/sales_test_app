@@ -18,9 +18,9 @@ class DashboardScreen extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         children: [
           tile('Customers', '/customer_list'),
-          tile('Products', '/products'),
-          tile('Sales Invoice', '/invoice'),
-          tile('Sales Report', '/report'),
+          tile('Products', '/product_add'),
+          tile('Sales Invoice', '/invoice_create'),
+          tile('Sales Report', '/sales_report'),
         ],
       ),
     );

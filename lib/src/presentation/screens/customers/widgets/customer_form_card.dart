@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sales_test_app/src/core/widgets/tip_chart.dart';
 
-import '../../data/models/ref_item_int.dart';
+import '../../../../data/models/ref_item_int.dart';
 import 'customer_section_header.dart';
 
 

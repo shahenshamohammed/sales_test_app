@@ -11,7 +11,10 @@ class FirebaseAuthRepository {
       email: email.trim(),
       password: password,
     );
+    print("======$cred");
     final token = await cred.user?.getIdToken(true);
+
+    print("------------$token");
     if (token == null || token.isEmpty) {
       throw Exception('Failed to obtain ID token.');
     }

@@ -1,1 +1,44 @@
-flutter/ephemeral
+# --- Flutter / Dart ---
+.dart_tool/
+.packages
+.pub/
+build/
+coverage/
+flutter_*.png
+**/doc/api/
+
+# --- Android ---
+android/.gradle/
+android/local.properties
+android/app/key.properties
+android/app/*.keystore
+android/app/*.jks
+android/keystore/
+
+# (optional) keep Firebase config out of git; commit a sample instead
+android/app/google-services.json
+ios/Runner/GoogleService-Info.plist
+
+# --- iOS / macOS ---
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Flutter.framework
+ios/Flutter/App.framework
+ios/Flutter/Generated.xcconfig
+ios/Flutter/*.xcframework
+macos/Pods/
+macos/Flutter/GeneratedPluginRegistrant.swift
+
+# --- IDE / Tools ---
+.vscode/
+.idea/
+*.iml
+
+# --- Env / secrets ---
+*.env
+.env*
+.env.local
+
+# --- Misc ---
+.DS_Store
+Thumbs.db

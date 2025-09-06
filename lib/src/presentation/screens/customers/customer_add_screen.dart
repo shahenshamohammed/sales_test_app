@@ -4,14 +4,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 
 
-import '../../core/widgets/customer_action_bar.dart';
-import '../../core/widgets/customer_add_screen_bg.dart';
-import '../../core/widgets/customer_form_card.dart';
-import '../../data/repositories/customer_repository.dart';
-import '../../data/repositories/reference_repositories.dart';
-import '../blocs/customer_forms/customer_form_bloc.dart';
-import '../blocs/customer_forms/customer_form_event.dart';
-import '../blocs/customer_forms/customer_form_state.dart';
+import 'widgets/customer_action_bar.dart';
+import 'widgets/customer_add_screen_bg.dart';
+import 'widgets/customer_form_card.dart';
+import '../../../data/repositories/customer_repository.dart';
+import '../../../data/repositories/reference_repositories.dart';
+import '../../blocs/customer_forms/customer_form_bloc.dart';
+import '../../blocs/customer_forms/customer_form_event.dart';
+import '../../blocs/customer_forms/customer_form_state.dart';
 
 
 class CustomerAddPage extends StatefulWidget {
@@ -42,6 +42,7 @@ class _CustomerAddPageState extends State<CustomerAddPage> {
             ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(state.error!)));
           }
           if (state.status == CustomerFormStatus.success) {
+
             ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Customer saved ✅')));
             Navigator.of(context).maybePop();
           }

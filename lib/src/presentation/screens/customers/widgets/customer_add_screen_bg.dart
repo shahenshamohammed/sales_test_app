@@ -1,4 +1,4 @@
-// lib/src/presentation/screens/customers/add/widgets/customer_hero_background.dart
+
 import 'package:flutter/material.dart';
 
 class CustomerHeroBackground extends StatelessWidget {

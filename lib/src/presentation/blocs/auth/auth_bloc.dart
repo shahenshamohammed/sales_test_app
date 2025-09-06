@@ -25,6 +25,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       await repo.signIn(email: e.email, password: e.password);
       emit(state.copyWith(status: AuthStatus.success));
     } on FirebaseAuthException catch (ex, st) {
+      print('$ex' '$st');
       // Log full details to console for debugging
       // (Don't show stack to users; just helpful while developing)
       // ignore: avoid_print

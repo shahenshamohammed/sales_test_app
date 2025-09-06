@@ -43,21 +43,12 @@ class AddCustomerBanner extends StatelessWidget {
                   Text('Add New Customer',
                       style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w800)),
                   SizedBox(height: 4),
-                  Text('Create a new account in seconds',
+                  Text('Create a new customer in seconds',
                       style: TextStyle(color: Colors.white70, fontSize: 13)),
                 ],
               ),
             ),
-            const SizedBox(width: 10),
-            FilledButton.icon(
-              onPressed: null, // disabled here, tap handled by InkWell above
-              icon: const Icon(Icons.add),
-              label: const Text('Add'),
-              style: FilledButton.styleFrom(
-                foregroundColor: cs.primary,
-                backgroundColor: Colors.white,
-              ),
-            ),
+
           ],
         ),
       ),
