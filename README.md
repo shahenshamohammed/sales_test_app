@@ -24,10 +24,21 @@
 - Sales Report (table + date & customer filters)
 
 
-## Endpoints (example)
-- POST /auth/login
-- GET/POST/PUT/DELETE /customers
-- GET/POST/PUT/DELETE /products
-- POST /uploads (image)
-- POST /sales (master + details)
-- GET /sales/report?from=...&to=...&customer=...
+>>Project Structure
+lib/
+src/
+core/                 # theme, routes, utils, constants
+data/
+models/             # DTOs: customer, product, invoice, report, ref items
+repositories/       # repository interfaces + Firestore/Storage implementations
+presentation/
+blocs/              # BLoC/Cubit for each feature
+screens/            # UI pages (login, dashboard, customers, products, invoice, report)
+widgets/            # reusable UI: dropdowns, pickers, fields, cards
+
+
+>>credentials for user login 
+
+Email: shahenshamohammedam@gmail.com
+Password: shahensha12
+
