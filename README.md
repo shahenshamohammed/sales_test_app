@@ -13,7 +13,7 @@
 
 
 ## Architecture
-- Clean Architecture (domain/data/presentation)
+- Clean Architecture (domain/data/presentation) 
 - Navigator 2.0 custom RouterDelegate
 
 

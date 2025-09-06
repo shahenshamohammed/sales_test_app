@@ -118,6 +118,28 @@ class _CustomerAddPageState extends State<CustomerAddPage> {
                     onReset: isSubmitting ? (){} : onReset,
                   ),
                 ),
+                Positioned(
+                  // keep it just below the status bar
+                  top: MediaQuery.of(context).padding.top + 2,
+                  right: 12,
+                  child: IconButton.filled(
+                    // use close on the right (reads better than a back arrow on the right)
+                    icon: const Icon(Icons.arrow_back_rounded),
+                    style: IconButton.styleFrom(
+                      backgroundColor: Colors.white.withOpacity(0.18),
+                      foregroundColor: Colors.white,
+                      padding: const EdgeInsets.all(10),
+                    ),
+                    onPressed: () {
+                      if (Navigator.canPop(context)) {
+                        Navigator.pop(context, true); // return result to refresh previous list
+                      } else {
+                        Navigator.of(context).pushReplacementNamed('/customers'); // fallback
+                      }
+                    },
+                    tooltip: 'Back',
+                  ),
+                ),
               ],
             ),
           );
