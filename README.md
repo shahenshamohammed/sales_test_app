@@ -5,7 +5,7 @@
 ## Setup
 - Flutter 3.x
 - `flutter pub get`
-- Run with `flutter run 
+- Run with `flutter run'
 
 
 ## Packages
