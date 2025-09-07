@@ -5,11 +5,21 @@
 ## Setup
 - Flutter 3.x
 - `flutter pub get`
-- Run with `flutter run --dart-define=API_BASE_URL=https://your.api`
+- Run with `flutter run 
 
 
 ## Packages
-- flutter_bloc, dio, flutter_secure_storage, json_serializable, equatable, intl, formz
+-   cupertino_icons: ^1.0.8
+    firebase_core: ^4.1.0
+    firebase_auth: ^6.0.2
+    flutter_bloc: ^9.0.0
+    flutter_secure_storage: ^9.2.2
+    cloud_firestore: ^6.0.1
+    image_picker: ^1.1.2
+    firebase_storage: ^13.0.1
+    cached_network_image: ^3.3.1
+    intl: ^0.19.0
+    equatable: ^2.0.5
 
 
 ## Architecture
