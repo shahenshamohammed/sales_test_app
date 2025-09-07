@@ -47,6 +47,34 @@ screens/            # UI pages (login, dashboard, customers, products, invoice, 
 widgets/            # reusable UI: dropdowns, pickers, fields, cards
 
 
+## Screenshots
+
+### Login
+![Login](docs/screenshots/login_screen.jpg)
+
+### Create Invoice
+![Create Invoice](docs/screenshots/create_invoice_screen.jpg)
+
+### Create customer
+![Create customer](docs/screenshots/customer_add_screen.jpg)
+
+###  Customer list
+![Customer_list](docs/screenshots/customer_list_screen.jpg)
+
+###  Dashboard
+![dashboard](docs/screenshots/dashboard_screen.jpg)
+
+###  Login
+![Login](docs/screenshots/login_screen.jpg)
+
+###  Add product
+![product](docs/screenshots/product_add_screen.jpg)
+
+###  Sales report
+![sales](docs/screenshots/sales_report_screen.jpg)
+
+
+
 >>credentials for user login 
 
 Email: shahenshamohammedam@gmail.com
