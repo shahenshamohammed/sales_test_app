@@ -64,9 +64,6 @@ widgets/            # reusable UI: dropdowns, pickers, fields, cards
 ###  Dashboard
 ![dashboard](docs/screenshots/dashboard_screen.jpg)
 
-###  Login
-![Login](docs/screenshots/login_screen.jpg)
-
 ###  Add product
 ![product](docs/screenshots/product_add_screen.jpg)
 
