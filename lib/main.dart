@@ -2,7 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sales_test_app/src/presentation/blocs/auth/auth_bloc.dart';
-import 'package:sales_test_app/src/presentation/blocs/auth/auth_firebase_repository.dart';
+import 'package:sales_test_app/src/data/repositories/auth_firebase_repository.dart';
 import 'package:sales_test_app/src/presentation/screens/auth_gate.dart';
 import 'package:sales_test_app/src/presentation/screens/customers/customer_add_screen.dart';
 import 'package:sales_test_app/src/presentation/screens/customers/customer_list_screen.dart';

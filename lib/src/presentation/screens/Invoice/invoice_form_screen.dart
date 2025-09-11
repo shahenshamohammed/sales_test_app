@@ -94,7 +94,7 @@ class InvoiceCreatePage extends StatelessWidget {
                             ),
                             const SizedBox(height: 12),
 
-                            // "Add Product" section (matches your reference structure)
+
                             Card(
                               elevation: 2,
                               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),

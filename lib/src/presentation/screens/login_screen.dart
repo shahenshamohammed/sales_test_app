@@ -53,7 +53,7 @@ class _LoginScreenState extends State<LoginScreen>
               .showSnackBar(SnackBar(content: Text(state.error!)));
         }
         if (state.status == AuthStatus.success) {
-          // If using your RouterDelegate, swap to: (Router.of(context).routerDelegate as _AppRouterDelegate).go('/dashboard');
+
           Navigator.of(context).pushReplacementNamed('/dashboard');
         }
       },

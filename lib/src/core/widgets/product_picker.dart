@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../../data/models/product_pick.dart';
 
 class ProductListSheet extends StatelessWidget {
-  final String collectionPath; // e.g. 'product_master'
+  final String collectionPath;
   const ProductListSheet({super.key, this.collectionPath = 'product_master'});
 
   @override
@@ -42,7 +42,7 @@ class ProductListSheet extends StatelessWidget {
                     ),
                   ),
                   title: Text(p.name, maxLines: 1, overflow: TextOverflow.ellipsis),
-                  subtitle: Text('Unit: ${p.rate.toStringAsFixed(2)}'),
+                  subtitle: Text('Price: ${p.rate.toStringAsFixed(2)}'),
                   onTap: () => Navigator.of(context).pop(p),
                 );
               },

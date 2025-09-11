@@ -43,9 +43,12 @@ class FirestoreGroupedSalesReportRepository implements GroupedSalesReportReposit
     }
     final itemsSnaps = await Future.wait(itemFutures);
 
+
+
     // 3) aggregate qty/amount per productId
     final byProduct = <String, _Agg>{};
     for (final snap in itemsSnaps) {
+      print(snap.docs);
       for (final d in snap.docs) {
         final m = d.data();
         final productId = (m['productId'] ?? '') as String;
@@ -89,7 +92,7 @@ class FirestoreGroupedSalesReportRepository implements GroupedSalesReportReposit
 
       // preferred unit price from catalog if available
       agg.catalogPrice = _parsePrice(data);
-
+print("categry id --- ${data['categoryId']}");
       // category id
       final cid = (data['categoryId'] as String?)?.trim();
       agg.categoryId = (cid == null || cid.isEmpty) ? 'uncat' : cid;

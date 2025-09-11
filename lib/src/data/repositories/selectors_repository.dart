@@ -10,7 +10,6 @@ class SelectorsRepository {
   SelectorsRepository({FirebaseFirestore? db}) : _db = db ?? FirebaseFirestore.instance;
 
   Future<List<CustomerLite>> searchCustomers(String query) async {
-    print("----------------$query");
     try {
       final q = query.trim().toLowerCase();
       var col = _db.collection('customer master'); // ← make sure this matches your real collection!

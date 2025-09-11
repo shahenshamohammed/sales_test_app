@@ -57,6 +57,7 @@ class InvoiceBloc extends Bloc<InvoiceEvent, InvoiceState> {
         date: state.date,
         items: state.items,
       );
+
       await repo.create(draft);
       emit(state.copyWith(status: InvoiceStatus.success));
     } catch (_) {

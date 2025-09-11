@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'auth_event.dart';
 import 'auth_state.dart';
-import '../auth/auth_firebase_repository.dart';
+import '../../../data/repositories/auth_firebase_repository.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
@@ -18,18 +18,13 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     emit(state.copyWith(status: ok ? AuthStatus.authenticated : AuthStatus.unauthenticated));
   }
 
-// lib/src/presentation/blocs/auth/auth_bloc.dart
+
   Future<void> _onLogin(LoginSubmitted e, Emitter<AuthState> emit) async {
     emit(state.copyWith(status: AuthStatus.submitting, error: null));
     try {
       await repo.signIn(email: e.email, password: e.password);
       emit(state.copyWith(status: AuthStatus.success));
     } on FirebaseAuthException catch (ex, st) {
-      print('$ex' '$st');
-      // Log full details to console for debugging
-      // (Don't show stack to users; just helpful while developing)
-      // ignore: avoid_print
-      print('FirebaseAuthException: code=${ex.code}, message=${ex.message}\n$st');
 
       final msg = switch (ex.code) {
         'invalid-email'           => 'Please enter a valid email address.',
@@ -44,9 +39,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       };
       emit(state.copyWith(status: AuthStatus.failure, error: msg));
     } catch (ex, st) {
-      // Log the non-Firebase error so we can see what failed (often secure storage)
-      // ignore: avoid_print
-      print('Non-Firebase error during login: $ex\n$st');
+
       emit(state.copyWith(
         status: AuthStatus.failure,
         error: 'Something went wrong. Please try again.',
