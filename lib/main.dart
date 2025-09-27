@@ -12,10 +12,13 @@ import 'package:sales_test_app/src/presentation/screens/login_screen.dart';
 import 'package:sales_test_app/src/presentation/screens/products/product_form_screen.dart';
 import 'package:sales_test_app/src/presentation/screens/products/product_list_screen.dart';
 import 'package:sales_test_app/src/presentation/screens/salesreport/sales_report_screen.dart';
+import 'package:flutter_test/flutter_test.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+
+
 
   runApp(
     RepositoryProvider(
@@ -52,4 +55,8 @@ class MyApp extends StatelessWidget {
       },
     );
   }
+}
+
+int add(int a, int b) {
+  return a + b;
 }
